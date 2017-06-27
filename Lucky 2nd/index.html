@@ -1,0 +1,68 @@
+<!--test-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+
+<header id="header">
+    Bus Arrival time
+</header>
+      
+    <main>
+<!--      okay change these to procedurally generated, these will bring up the information on each bus.-->
+
+        <div class="left">
+            <button onclick="awapuni_bus.addContent()">awapuni</button>
+            <button onclick="rugby_bus.addContent()">Rugby</button>
+            <button onclick="highbury_bus.addContent()">highbury</button>
+            <button onclick="takaro.addContent()">takaro</button>
+            <button onclick="cloverlea.addContent()">cloverlea</button>
+            <button onclick="milson.addContent()">milson</button>
+        </div>
+        
+        <div class="right">
+            <div>
+                <h1 id="name">name</h1>
+                <h4 id="stop">stop</h4>
+                <h4 id="colour">colour</h4>
+                <h4 id="nom_time">monday</h4>
+                <h4 id="fri_time">friday</h4>
+                <h4 id="sat_time">saturady</h4>
+                <h4 id="sun_time">sunday</h4>
+            </div>
+        </div>
+
+      </main>
+      
+      <section>
+        <div id="map"></div>
+      </section>
+      
+<footer>  
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="info.html">info</a></li>
+  <li><a href="timetable.html">timetable</a></li>
+  <li><a href="favorites.html">favorites</a></li>
+<li><a href="settings.html">settings</a></li>
+</ul> 
+</footer>     
+
+      
+    <script src="bus-stops-and-times-final.js"></script>
+      <script src = "bus_class&objects.js"></script>
+   <script src = "google_maps.js"></script>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgOSp5CDlqX2gNKWM_Respkw4dZ7-BfM8&callback=initMap" async defer></script>
+
+
+      
+  </body>
+</html>
