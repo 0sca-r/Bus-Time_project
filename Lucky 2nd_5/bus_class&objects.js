@@ -147,3 +147,21 @@ function checkTime(i) {
 }
 
 
+          //start jqery bullshit
+//      $(document).ready(function(){
+//          for(i = 1; i<20000; i++){
+//          $('#header').hide(400).show(1100);}
+//      });
+
+
+
+
+///////RAINBOW THINGS, THIS CODE CHANGES THE COLOUR OF THE SITE BASED ON THINGS
+function myFunction(favcolor) {
+    var col = document.getElementById("favcolor").value;
+    document.body.style.background = col;
+};        
+
+
+
+
