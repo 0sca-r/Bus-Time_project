@@ -1,0 +1,83 @@
+<!--test-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+
+<header id= "arrival">
+    Bus Arrival time
+</header>
+      
+    <main>
+<!--      okay change these to procedurally generated, these will bring up the information on each bus.-->
+
+        <div class="left">
+
+            
+            <select id="route_d" onchange="load_stops()">
+                <option>Awapuni</option>
+                <option>Rugby</option>
+                <option>Highbury</option>
+                <option>Takaro</option>
+                <option>Cloverlea</option>
+                <option>Milson</option>
+                <option>Rhodes</option>
+                <option>Roslyn</option>
+                <option>Rangiora</option>
+                <option>Brightwater</option>
+                <option>Fernlea</option>
+                <option>Heights</option>
+            </select>
+            
+            <select id="stops_d" onchange="getTimes(); get_arrival()";>
+             
+            </select>
+            
+            <select id="times_d">
+            
+            </select>
+            
+        </div>
+        
+        
+        <div class="right">
+            <div>
+                <h1>Bus arrives in:  </h1>
+                <h1 id= "arrival"></h1>
+            </div>
+        </div>
+
+      </main>
+      
+      <section>
+        <div id="map"></div>
+      </section>
+      
+<footer>  
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="info.html">info</a></li>
+  <li><a href="timetable.html">timetable</a></li>
+  <li><a href="favorites.html">favorites</a></li>
+<li><a href="settings.html">settings</a></li>
+</ul> 
+</footer>     
+
+
+<script src="bus-stops-and-times-final.js"></script>
+<script src = "bus_class&objects.js"></script>
+<script src = "google_maps.js"></script>
+      
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgOSp5CDlqX2gNKWM_Respkw4dZ7-BfM8&callback=initMap" async defer></script>
+
+
+      
+  </body>
+</html>

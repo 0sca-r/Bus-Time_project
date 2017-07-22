@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+      
+<h2>select color 1</h2>  
+    <input type="color" name="favcolor" id="favcolor" oninput="myFunction()">
+ <script src="settings.js"></script>   
+      
+<h2>select color 2</h2>     
+      <input type="color" name="afavcolor" id="afavcolor" oninput="amyFunction()">
+                <script>
+                function amyFunction(afavcolor) {
+                    var acol = document.getElementById("afavcolor").value;
+                    document.body.style.textOverlineColor = acol;
+                };
+                </script>  
+      
+      <footer>  
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="info.html">info</a></li>
+  <li><a href="timetable.html">timetable</a></li>
+  <li><a href="favorites.html">favorites</a></li>
+<li><a href="settings.html">settings</a></li>
+</ul> 
+</footer>  
+      
+  </body>
+</html>

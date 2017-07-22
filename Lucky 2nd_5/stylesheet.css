@@ -1,0 +1,128 @@
+/*//////////////Desktop////////////*/
+
+body{
+background-color:palegreen;
+flex-direction: column;
+}
+ 
+h1{
+justify-content: center;
+text-align: center;
+font-size: 10vh;
+}
+
+h2{
+justify-content: center;
+text-align: center;
+background-color: aliceblue}
+
+h3{
+justify-content: center;
+text-align: center;
+background-color: aliceblue;
+position:fixed; /*"fixes" the menu bar to a position*/
+bottom: 0; /*Makes the menu bar appear at the bottom*/
+}
+
+
+header{
+    background-color: grey;
+    display:flex;
+    justify-content: center;
+    flex-direction: row
+    
+}
+main{
+    background-color:limegreen;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 50%;
+}
+
+.right, .left {
+    width: 50%;
+}
+
+/*MAP*/
+section {
+    width: 80%;
+    height: 80vh;
+}
+
+section #map {
+    height: 100%;
+    background: blue;
+}
+
+
+
+
+/*---------------This is the styling for the table in the info page*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color:darkgray}/*makes every even tile a different colour, same for the below but with odd tiles*/
+tr:nth-child(odd){background-color:gray}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+/*--------------This is the Ul code, it's for the navigainion bars---*/
+ul {
+    list-style-type: none; /*We don't want bullet points in the nav bar, this code removes it*/ 
+    margin: 0;
+    padding: 0; /*these two remove any browser setting that might screw with the design*/
+    overflow: hidden; /*Horizontal and not that big so scrolling would just be a hassle, hence extra area is hidden*/ 
+    background-color: #333;
+}
+
+li {
+    float: left;/*Makes the nav bars content go side by side, from the left side of the screen. */
+}
+
+li a { /* The A and B tags are to differentiate the two navigation bars*/
+    
+    display: block; /*Block display so whole area is clickable and it turns into a psudeo button, it also enables you to change aspects like height and padding*/
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover { /*Makes the button link change colour when hovered*/
+    background-color: #111;
+}
+/*this is the footer code, since the navigation bar is stored here it's next to it*/
+footer{
+    position:fixed; /*"fixes" the menu bar to a position*/
+    bottom: 0; /*Makes the menu bar appear at the bottom*/   
+}
+
+li.b{
+    list-style-type: circle;
+     margin: 7px;
+    padding:inherit ; 
+    overflow:auto; /*Horizontal and not that big so scrolling would just be a hassle, hence extra area is hidden*/ 
+    background-color: #333;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    flex-direction: row;
+    background-color: green;
+    color: aliceblue;  /*this is text colour i know, it's a weird to have it called just color*/
+    font-size: 130%;
+}
