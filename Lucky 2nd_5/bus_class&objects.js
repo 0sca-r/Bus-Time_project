@@ -16,8 +16,6 @@ class Bus {
         this.sat_timeDOM = document.getElementById("sat_time");
         this.sun_timeDOM = document.getElementById("sun_time");
         this.route_dDOM = document.getElementById("route_d");
-        this.stops_dDOM = document.getElementById("stops_d");
-        this.times_dDOM = document.getElementById("times_d");
         this.arrivalDOM = document.getElementById("arrival");
 
     }
@@ -32,25 +30,6 @@ class Bus {
         this.sun_timeDOM.innerHTML = this.sun_time;
     }
     
-    format_stop(){
-        var content = '<ul>';
-        //loop over array
-        for (var i = 0; i < this.stop.length; i++){
-            content += '<li class ="stop b">' + this.stop[i] + '</li>'
-        }
-        content += '</ul>'
-        return content
-    }
-
-    
-    format_times(){
-        var content_HTML_string_times = "<ul>"
-           for (var i = 0; i < this.fri_time.length; i++){
-            content_HTML_string_times += '<li class ="fri_time">' + this.fri_time[i] + '</li>'
-        }
-        content_HTML_string_times += '</ul>'
-        return content_HTML_string_times 
-    }
     
 }
 
@@ -76,7 +55,6 @@ var value = "";
 function load_stops() {
     value = document.getElementById("route_d").value
     value = value.toLowerCase() + "_bus"
-    console.log(value);
     var content = "";
         //loop over array
         for (var i = 0; i < eval(value).stop.length; i++){
@@ -86,9 +64,11 @@ function load_stops() {
 }
 function getTimes() {
     times_dDOM.innerHTML = '';
-    var x = stops_dDOM.selectedIndex;
     var content = "";
-    for (var i = 0; i < eval(value).nom_time.length; i++){
+    var x = stops_dDOM.selectedIndex;
+    var day = get_day();
+
+    for (var i = 0; i < eval(value).nom_time.length; i++){ /*IMPORTANT THING HERE CHANGE NOM TIME TO GET_DAY() THIS IS REALLY IMPORTANT DON'T IGNORE THIS WHEN YOU GET BACK*/
         content += '<option>' + eval(value).nom_time[i][x] + '</option>'
     } 
     times_dDOM.innerHTML = content;
@@ -100,6 +80,8 @@ function get_day(){
     var d = new Date();
     var i = 0;
     var day = d.getDay();
+
+   
     if (day <= 4){
       day = eval(value).nom_time;
     }
@@ -112,8 +94,9 @@ function get_day(){
     }
         else{
       day = eval(value).sun_time;
-    }
+    };
     return day
+   
 }
 
 function get_arrival(){
@@ -124,14 +107,14 @@ function get_arrival(){
     h = checkTime(h)
     m = checkTime(m)
     var time = h + "." + m;
-    console.log(time)
-    var day = get_day()
+    console.log(time);
+    var day = get_day();
     for (var i = 0; i < day.length; i++){
         
         if (time < day[i][x]) {
             var next = day[i][x];
+            document.getElementById("arrival").innerHTML = next;
             console.log(next);
-            arrivalDOM.innerHTML = next;
             return
         }
 

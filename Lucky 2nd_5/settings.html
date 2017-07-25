@@ -7,28 +7,34 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+ 
+      <h1>Settings</h1>
       
-<h2>select color 1</h2>  
+<h2>select colour 1</h2>  
     <input type="color" name="favcolor" id="favcolor" oninput="myFunction()">
- <script src="settings.js"></script>   
+ <script src="bus_class&objects.js"></script>   
       
-<h2>select color 2</h2>     
+<h2>select colour 2</h2>     
       <input type="color" name="afavcolor" id="afavcolor" oninput="amyFunction()">
                 <script>
                 function amyFunction(afavcolor) {
                     var acol = document.getElementById("afavcolor").value;
-                    document.body.style.textOverlineColor = acol;
+                    document.body.style.color = acol;
                 };
                 </script>  
-      
-      <footer>  
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="info.html">info</a></li>
-  <li><a href="timetable.html">timetable</a></li>
-  <li><a href="favorites.html">favorites</a></li>
-<li><a href="settings.html">settings</a></li>
-</ul> 
+      <main>
+<!--      GPS tracking
+data notification
+report an issue
+help-->
+      </main>
+<footer>  
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="info.html">info</a></li>
+
+    <li><a href="settings.html">settings</a></li>
+    </ul> 
 </footer>  
       
   </body>

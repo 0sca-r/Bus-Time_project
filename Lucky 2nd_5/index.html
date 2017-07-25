@@ -11,17 +11,16 @@
   </head>
   <body>
 
-<header id= "arrival">
+<header>
     Bus Arrival time
 </header>
       
     <main>
-<!--      okay change these to procedurally generated, these will bring up the information on each bus.-->
-
         <div class="left">
 
             
             <select id="route_d" onchange="load_stops()">
+                <option disabled selected>Select Route</option>
                 <option>Awapuni</option>
                 <option>Rugby</option>
                 <option>Highbury</option>
@@ -37,11 +36,11 @@
             </select>
             
             <select id="stops_d" onchange="getTimes(); get_arrival()";>
-             
+              <option disabled selected>Select Stop</option>
             </select>
             
             <select id="times_d">
-            
+             <option disabled selected>View Times</option>
             </select>
             
         </div>
@@ -49,8 +48,8 @@
         
         <div class="right">
             <div>
-                <h1>Bus arrives in:  </h1>
-                <h1 id= "arrival"></h1>
+                <h1>Next bus arrives at:</h1>
+                <h1 id= "arrival">placeholder</h1>
             </div>
         </div>
 
@@ -64,8 +63,6 @@
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="info.html">info</a></li>
-  <li><a href="timetable.html">timetable</a></li>
-  <li><a href="favorites.html">favorites</a></li>
 <li><a href="settings.html">settings</a></li>
 </ul> 
 </footer>     
