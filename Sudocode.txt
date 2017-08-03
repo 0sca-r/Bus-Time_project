@@ -1,0 +1,3 @@
+ - - start program - -
+ Constructor, establishes varibles of the linked Bus times.
+ sets data to object with the bus information. 
