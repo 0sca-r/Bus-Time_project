@@ -26,10 +26,13 @@ bottom: 0; /*Makes the menu bar appear at the bottom*/
 
 
 header{
-    background-color: grey;
+    background-color:mediumseagreen;
     display:flex;
-    justify-content: center;
-    flex-direction: row
+    align-content: left;
+    flex-direction: row;
+    color: whitesmoke;
+    font-size: 180%;
+      
     
 }
 main{

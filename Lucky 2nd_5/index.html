@@ -12,14 +12,15 @@
   <body>
 
 <header>
-    Bus Arrival time
+    Horisions Bus Services
 </header>
       
     <main>
         <div class="left">
 
-            
+<!--The Three select tags are for the bus slection, the reason two of them are empty is because based on the selection of the first one, the second one will change, and third changes on second.-->
             <select id="route_d" onchange="load_stops()">
+<!--ID assigns an identity to the tag that allows it to be "called" in Javascript, and the onchange is a function that runs when the select tag is "changed"-->
                 <option disabled selected>Select Route</option>
                 <option>Awapuni</option>
                 <option>Rugby</option>
@@ -35,7 +36,7 @@
                 <option>Heights</option>
             </select>
             
-            <select id="stops_d" onchange="getTimes(); get_arrival()";>
+            <select id="stops_d" onchange="getTimes(); get_arrival()">
               <option disabled selected>Select Stop</option>
             </select>
             
@@ -49,7 +50,7 @@
         <div class="right">
             <div>
                 <h1>Next bus arrives at:</h1>
-                <h1 id= "arrival">placeholder</h1>
+                <h1 id= "arrival">Select a time</h1>
             </div>
         </div>
 
@@ -64,6 +65,7 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="info.html">info</a></li>
 <li><a href="settings.html">settings</a></li>
+<li><a href="useless.html">linked page</a></li>
 </ul> 
 </footer>     
 

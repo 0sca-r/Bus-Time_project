@@ -68,8 +68,8 @@ function getTimes() {
     var x = stops_dDOM.selectedIndex;
     var day = get_day();
 
-    for (var i = 0; i < eval(value).nom_time.length; i++){ /*IMPORTANT THING HERE CHANGE NOM TIME TO GET_DAY() THIS IS REALLY IMPORTANT DON'T IGNORE THIS WHEN YOU GET BACK*/
-        content += '<option>' + eval(value).nom_time[i][x] + '</option>'
+    for (var i = 0; i < day.length; i++){ /*IMPORTANT THING HERE CHANGE NOM TIME TO GET_DAY() THIS IS REALLY IMPORTANT DON'T IGNORE THIS WHEN YOU GET BACK*/
+        content += '<option>' + day[i][x] + '</option>'
     } 
     times_dDOM.innerHTML = content;
 }
