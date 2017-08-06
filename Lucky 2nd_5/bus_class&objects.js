@@ -68,34 +68,68 @@ function getTimes() {
     var x = stops_dDOM.selectedIndex;
     var day = get_day();
 
-    for (var i = 0; i < day.length; i++){ /*IMPORTANT THING HERE CHANGE NOM TIME TO GET_DAY() THIS IS REALLY IMPORTANT DON'T IGNORE THIS WHEN YOU GET BACK*/
+    for (var i = 0; i < day.length; i++){
         content += '<option>' + day[i][x] + '</option>'
     } 
     times_dDOM.innerHTML = content;
+    this.createMarker(index);
+
 }
 
+function createMarker(index){
+        if (this.marker != null) {
+            this.marker.setMap(null);
+            this.marker = null;
+        }
+        var stopPosition = this.stopPositions[index];
+        var stopName = this.busStops[index];
+        this.marker = new google.maps.Marker({
+            map: map,
+            position: stopPosition, 
+            title: stopName
+        });
+        
+        map.setCenter(stopPosition);
+        map.setZoom(15);
+    }
 
 
 function get_day(){
     var d = new Date();
-    var i = 0;
     var day = d.getDay();
+    var x;
+    
+    switch(day) {
+        case 0: 
+            x = eval(value).sun_time;
+            break;
+        case 5:  x = eval(value).nom_time.push(eval(value).fri_time);
+            break;
+        case 6: x = eval(value).sat_time;
+            break;
+        default: x = eval(value).nom_time;
+            break;
+       
+            
+    }
 
-   
-    if (day <= 4){
-      day = eval(value).nom_time;
-    }
-    else if (day == 5){
-      eval(value).nom_time.push(eval(value).fri_time)
-      day = eval(value).nom_time;
-    }
-     else if (day == 6){ 
-      day = eval(value).sat_time;
-    }
-        else{
-      day = eval(value).sun_time;
-    };
-    return day
+//
+//   
+//    if (day <= 4){
+//      day = eval(value).nom_time;
+//    }
+//    else if (day == 5){
+//      eval(value).nom_time.push(eval(value).fri_time)
+//      day = eval(value).nom_time;
+//    }
+//     else if (day == 6){ 
+//      day = eval(value).sat_time;
+//    }
+//        else{
+//      day = eval(value).sun_time;
+//    };
+    
+    return x
    
 }
 
