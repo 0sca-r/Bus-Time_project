@@ -129,7 +129,7 @@ select {
     color: aliceblue;  /*this is text colour i know, it's a weird to have it called just color*/
     font-size: 130%;
 }
-
+.mobile{display: none;}
 
 
 /*/////////////////Mobile////////////////*/
@@ -137,4 +137,20 @@ select {
     body {
         background-color: lightblue;
     }
+
+    
+    section {
+    width: 100%;
+    height: 80vh;
+}
+    .right, .left {width: 100%;}
+    select {background-color:cadetblue;}
+    header{background-color:skyblue;}
+    .mobile{display: flex;}
+    .right{background-color:skyblue; font-size:50px}
+    main {
+    background-color: lightblue;
+    color:whitesmoke;
+    
+}
 }

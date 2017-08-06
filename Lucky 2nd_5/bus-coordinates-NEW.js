@@ -1,4 +1,4 @@
-data.stopCoordinates = {
+var stopCoordinates = {
     awapuni: [
         new google.maps.LatLng(-40.35544, 175.61281),
         new google.maps.LatLng(-40.36957, 175.608092),
@@ -135,7 +135,7 @@ data.stopCoordinates = {
 
 
 
-data.shapeCoordinates = {
+var shapeCoordinates = {
     awapuni: [
         {
             lat: -40.35553,
