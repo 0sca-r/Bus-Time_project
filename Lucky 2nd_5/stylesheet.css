@@ -28,7 +28,6 @@ bottom: 0; /*Makes the menu bar appear at the bottom*/
 header{
     background-color:mediumseagreen;
     display:flex;
-    align-content: left;
     flex-direction: row;
     color: whitesmoke;
     font-size: 180%;
@@ -147,10 +146,12 @@ select {
     select {background-color:cadetblue;}
     header{background-color:skyblue;}
     .mobile{display: flex;}
-    .right{background-color:skyblue; font-size:50px}
+    .right{background-color:skyblue; align-self: left}
+    h1{font-size:6vh;}
     main {
     background-color: lightblue;
     color:whitesmoke;
+          flex-direction: column;
     
 }
 }
