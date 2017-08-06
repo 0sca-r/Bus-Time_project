@@ -146,7 +146,7 @@ select {
     select {background-color:cadetblue;}
     header{background-color:skyblue;}
     .mobile{display: flex;}
-    .right{background-color:skyblue; align-self: left}
+    .right{background-color:skyblue;}
     h1{font-size:6vh;}
     main {
     background-color: lightblue;
